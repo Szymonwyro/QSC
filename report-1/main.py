@@ -21,7 +21,7 @@ def main() -> None:
     args = parser.parse_args()
 
     mode = "demo" if args.demo else "market"
-    out = Path("results") / mode
+    out = Path(__file__).resolve().parent / "results" / mode
     out.mkdir(parents=True, exist_ok=True)
 
     if args.demo:
